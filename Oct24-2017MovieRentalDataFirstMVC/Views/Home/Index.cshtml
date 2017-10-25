@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Women in Prison for Men in Prison</h1>
+    <h4 class="lead">The nation's only movie store devoted to providing movies about women in prison to men in prison.</h4>
+    
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Movies", "Index", "Movies")</h2>
+        <p>
+            Add, delete and edit movies here.
+        </p>
+        
+    </div>
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Customers", "Index", "Customers")</h2>
+        <p>Manage customers here.</p>
+    </div>
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Rentals", "Index", "Rentals")</h2>
+        <p>Match movies with customers.</p>
+    </div>
+</div>
