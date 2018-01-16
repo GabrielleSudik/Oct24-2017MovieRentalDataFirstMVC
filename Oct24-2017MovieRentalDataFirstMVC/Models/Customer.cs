@@ -25,6 +25,9 @@ namespace Oct24_2017MovieRentalDataFirstMVC.Models
         public string LastName { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
+        public string CellNumber { get; set; }
+        public string Phone1 { get; set; }
+        public string Email1 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Rental> Rentals { get; set; }

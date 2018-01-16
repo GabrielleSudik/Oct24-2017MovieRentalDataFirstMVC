@@ -46,7 +46,7 @@ namespace Oct24_2017MovieRentalDataFirstMVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CustomerID,FirstName,LastName,Phone,Email")] Customer customer)
+        public ActionResult Create([Bind(Include = "CustomerID,FirstName,LastName,Phone,Email,CellNumber")] Customer customer)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace Oct24_2017MovieRentalDataFirstMVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CustomerID,FirstName,LastName,Phone,Email")] Customer customer)
+        public ActionResult Edit([Bind(Include = "CustomerID,FirstName,LastName,Phone,Email,CellNumber")] Customer customer)
         {
             if (ModelState.IsValid)
             {

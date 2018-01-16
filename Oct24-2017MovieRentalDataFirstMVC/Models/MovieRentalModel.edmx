@@ -12,7 +12,8 @@
           <Property Name="CustomerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
           <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="CellNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
           <Property Name="Email" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Movies">
@@ -85,6 +86,9 @@
           <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Rentals" Relationship="Model.FK_Rentals_Customers" FromRole="Customer" ToRole="Rental" />
+          <Property Name="CellNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Phone1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Movy">
           <Key>
@@ -154,12 +158,13 @@
           <EntitySetMapping Name="Customers">
             <EntityTypeMapping TypeName="Model.Customer">
               <MappingFragment StoreEntitySet="Customers">
+                <ScalarProperty Name="Email1" ColumnName="Email" />
+                <ScalarProperty Name="Phone1" ColumnName="Phone" />
+                <ScalarProperty Name="CellNumber" ColumnName="CellNumber" />
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="Phone" ColumnName="Phone" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-              </MappingFragment>
+                </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Movies">
